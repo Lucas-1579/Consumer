@@ -17,7 +17,7 @@ public class Program {
 		products.add(new Product("HD Case", 80.90));
 		
 		
-		products.forEach(Product::staticMyConsumer);
+		products.forEach(Product::nonStaticMyConsumer);
 		products.forEach(System.out::println);
 		
 
