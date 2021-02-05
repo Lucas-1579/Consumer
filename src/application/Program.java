@@ -21,12 +21,12 @@ public class Program {
 		products.add(new Product("Tablet", 350.50));
 		products.add(new Product("HD Case", 80.90));
 		
-		System.out.print("Enter the percentage to increase the salary: ");
+		System.out.print("Enter the percentage to increase the product price: ");
 		double percent = sc.nextDouble();
 		System.out.println();
 		
 		products.forEach(p -> p.setPrice(p.getPrice() * percent));
-		System.out.println("Update salary: ");
+		System.out.println("Update price: ");
 		products.forEach(System.out::println);
 		
 
