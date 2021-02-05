@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import entitie.Product;
 
@@ -16,8 +17,9 @@ public class Program {
 		products.add(new Product("Tablet", 350.50));
 		products.add(new Product("HD Case", 80.90));
 		
+		Consumer<Product> con = p -> p.setPrice(p.getPrice() * 1.1);
 		
-		products.forEach(Product::nonStaticMyConsumer);
+		products.forEach(con);
 		products.forEach(System.out::println);
 		
 
