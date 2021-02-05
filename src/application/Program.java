@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entitie.Product;
-import util.MyConsumer;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 		products.add(new Product("HD Case", 80.90));
 		
 		
-		products.forEach(new MyConsumer());
+		products.forEach(Product::staticMyConsumer);
 		products.forEach(System.out::println);
 		
 
